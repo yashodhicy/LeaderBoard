@@ -5,9 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
-    <img src= "images/icon.gif" />
 <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
 <body>
-    <h1>hello</h1>
+    <h1>Leaderboard</h1>
+    <section id="main">
+        <section id = "leftside">
+            <div id="topic-scores">
+                <h2 id="recentscore">Recent Scores</h2>
+                <button id="refresh">Refresh</button>
+            </div>
+            <div id="scoresList">
+                <ul id ="scoresul">
+
+                </ul>
+
+            </div>
+        </section>
+        <section id="rightside">
+            <h2 id="addscore">Add your Score</h2>
+            <form>
+                <input id="name" type ="text" placeholder="Your name">
+                <input id ="score" type ="text" placeholder="Your score">
+                <button type="submit" id="submitbtn">Submit</button>
+            </form>
+        </section>
+
+    </section>
 </body>
 </html>

@@ -1,3 +1,79 @@
-* {
-  box-sizing: border-box;
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#main {
+  display: flex;
+  padding: 2rem 5%;
+}
+
+#leftside,
+#rigtside {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+#topic-scores {
+  width: 80%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#refresh {
+  height: 2rem;
+}
+
+#recentscore,
+#addscore {
+  margin: 0;
+}
+
+#scoresList {
+  border: 2px solid black;
+  height: 20rem;
+  width: 80%;
+  overflow-y: scroll;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+input {
+  border: 2px solid black;
+}
+
+#submitbtn,
+#refresh {
+  width: fit-content;
+  border: 2px solid black;
+  box-shadow: 2px 2px 1px 0 black;
+  background-color: white;
+}
+
+#submitbtn {
+  align-self: flex-end;
+}
+
+#scoresul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  list-style: none;
+  height: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.listItem:nth-child(even) {
+  background-color: aquamarine;
 }
