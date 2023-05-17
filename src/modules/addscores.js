@@ -1,17 +1,14 @@
-const getScores = () => {
-  let scores;
-  if (localStorage.getItem('scores') === null) {
-    scores = [];
-  } else {
-    scores = JSON.parse(localStorage.getItem('scores'));
-  }
-  return scores;
+const AddscoreApi = async (username, gamescore) => {
+  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/bWICSzhifl4RL1S8Lvdq/scores/', {
+    method: 'POST',
+    body: JSON.stringify({
+      user: username.toString(),
+      score: gamescore,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
 };
 
-const addScores = (score) => {
-  const scores = getScores();
-  scores.push(score);
-  localStorage.setItem('scores', JSON.stringify(scores));
-};
-
-export { getScores, addScores };
+export default AddscoreApi;

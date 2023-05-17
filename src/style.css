@@ -70,10 +70,14 @@ input {
 .listItem {
   list-style: none;
   height: 2rem;
-  width: 100%;
+  width: 90%;
   padding: 0 1rem;
 }
 
 .listItem:nth-child(even) {
   background-color: aquamarine;
+}
+
+.clicked {
+  background-color: aquamarine !important;
 }
