@@ -1,20 +1,28 @@
 import './style.css';
-import Score from './modules/scores.js';
-import { getScores, addScores } from './modules/addscores.js';
-import render from './modules/render.js';
+import AddscoreApi from './modules/addscores.js';
+import getScores from './modules/getscores.js';
+import refreshpage from './refreshpage.js';
 
-document.addEventListener('DOMContentLoaded', render());
+document.addEventListener('DOMContentLoaded', getScores());
 const addbtn = document.getElementById('submitbtn');
-const refresh = document.getElementById('refresh');
 
-addbtn.addEventListener('click', () => {
+addbtn.addEventListener('click', (event) => {
+  event.preventDefault();
   const inputname = document.querySelector('#name').value;
   const inputscore = document.querySelector('#score').value;
-  const newscore = new Score(inputname, inputscore);
-  addScores(newscore);
-  render();
+  AddscoreApi(inputname, inputscore).then(() => {
+    // handle the response
+    refreshpage();
+    document.querySelector('#name').value = '';
+    document.querySelector('#score').value = '';
+  });
 });
 
-refresh.addEventListener('click', () => {
-  getScores();
+const refreshEl = document.getElementById('refresh');
+refreshEl.addEventListener('click', () => {
+  refreshEl.classList.add('clicked');
+  refreshpage();
+  setTimeout(() => {
+    refreshEl.classList.remove('clicked');
+  }, 800);
 });
