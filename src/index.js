@@ -6,7 +6,7 @@ import refreshpage from './refreshpage.js';
 document.addEventListener('DOMContentLoaded', getScores());
 const addbtn = document.getElementById('submitbtn');
 
-addbtn.addEventListener('click', async(event) => {
+addbtn.addEventListener('click', async (event) => {
   event.preventDefault();
   const inputname = document.querySelector('#name').value;
   const inputscore = document.querySelector('#score').value;
