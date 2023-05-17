@@ -6,11 +6,11 @@ import refreshpage from './refreshpage.js';
 document.addEventListener('DOMContentLoaded', getScores());
 const addbtn = document.getElementById('submitbtn');
 
-addbtn.addEventListener('click', (event) => {
+addbtn.addEventListener('click', async(event) => {
   event.preventDefault();
   const inputname = document.querySelector('#name').value;
   const inputscore = document.querySelector('#score').value;
-  AddscoreApi(inputname, inputscore).then(() => {
+  await AddscoreApi(inputname, inputscore).then(() => {
     // handle the response
     refreshpage();
     document.querySelector('#name').value = '';
