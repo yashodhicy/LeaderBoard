@@ -1,21 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(1, 66, 44);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 #main {
   display: flex;
-  padding: 2rem 5%;
+  padding: 0;
+  justify-content: center;
+  gap: 10%;
 }
 
 #leftside,
-#rigtside {
+#rightside {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 40%;
+  padding: 0 1rem;
+  margin-top: 2rem;
 }
 
 #topic-scores {
-  width: 80%;
+  width: 100%;
   height: 4rem;
   display: flex;
   flex-direction: row;
@@ -34,31 +54,49 @@ body {
 #scoresList {
   border: 2px solid black;
   height: 20rem;
-  width: 80%;
+  width: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 2rem;
   gap: 1rem;
+  width: 65%;
+  align-items: flex-end;
 }
 
 input {
   border: 2px solid black;
+  height: 2rem;
+  width: 100%;
+  padding-left: 0.5rem;
 }
 
 #submitbtn,
 #refresh {
-  width: fit-content;
   border: 2px solid black;
   box-shadow: 2px 2px 1px 0 black;
   background-color: white;
+  padding: 0.2rem;
+  width: 30%;
 }
 
 #submitbtn {
   align-self: flex-end;
+  height: 2rem;
+  width: 30%;
+}
+
+#submitbtn:hover,
+#refresh:hover {
+  transform: scale(1.1);
+}
+
+#submitbtn:active {
+  background-color: aquamarine;
 }
 
 #scoresul {
@@ -72,6 +110,16 @@ input {
   height: 2rem;
   width: 90%;
   padding: 0 1rem;
+  line-height: 2rem;
+}
+
+.listItem:hover {
+  transform: scale(1.3);
+  text-align: center;
+}
+
+.listItem:nth-child(odd) {
+  background-color: rgb(241, 241, 241);
 }
 
 .listItem:nth-child(even) {
@@ -80,4 +128,13 @@ input {
 
 .clicked {
   background-color: aquamarine !important;
+}
+
+input::placeholder {
+  margin-left: 1rem;
+  color: rgb(23, 97, 72);
+}
+
+input:hover {
+  transform: scale(1.1);
 }

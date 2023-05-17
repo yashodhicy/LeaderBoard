@@ -24,8 +24,8 @@
         <section id="rightside">
             <h2 id="addscore">Add your score</h2> 
             <form>
-                <input id="name" type ="text" placeholder=" &#x1F468;&#x200D;&#x1F4BC; Your name">
-                <input id ="score" type ="text" placeholder="&#x1F52F;Your score">
+                <input id="name" type ="text" placeholder=" &#x1F468;&#x200D;&#x1F4BC; Your name" required>
+                <input id="score" type="number" placeholder="🏆 Your score" min="10" max="200" required>
                 <button type="submit" id="submitbtn">Submit</button>
                 <article><p id="error"></p></article>
             </form>
