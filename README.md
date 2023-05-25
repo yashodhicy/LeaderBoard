@@ -55,7 +55,7 @@
 ## 🚀 Live Demo(still in development) <a name="live-demo"></a>
 
 
-- [live project](#) - upcoming
+- [live project](https://yashodhicy.github.io/LeaderBoard/dist/) - upcoming
 
 ## 🚀 Live Video(still in development) <a name="live-video"></a>
 
